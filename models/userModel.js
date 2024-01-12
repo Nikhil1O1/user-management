@@ -28,7 +28,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Password is requried'],
         validate: {
-            //this works only on save & create, [save/create is called in controller]
             validator: function(el) {
                 return el === this.password;
             },
